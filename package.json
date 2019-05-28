@@ -1,0 +1,29 @@
+{
+  "name": "image-minify",
+  "version": "1.0.1",
+  "description": "library for cli images minify",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hhru/gulp-minify-images.git"
+  },
+  "keywords": [
+    "gulp"
+  ],
+  "author": "PAMPANG",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pampang/image-minify/issues"
+  },
+  "homepage": "https://github.com/pampang/image-minify",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-plumber": "1.2.1",
+    "gulp-run-sequence": "0.3.2",
+    "yargs": "~3.15.0"
+  },
+  "dependencies": {
+    "gulp-imagemin": "~3.1.1",
+    "imagemin": "~5.2.2"
+  }
+}

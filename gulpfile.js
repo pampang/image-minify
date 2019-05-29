@@ -36,8 +36,8 @@ const copyImages = () => {
   return gulp
     .src([
       `${imageSrc}/**/*.{png,jpg,gif,svg}`,
-      `!${imageSrc}/**/{android,android/**}`, // 排除 android/
-      `!${imageSrc}/**/{ios,ios/**}`, // 排除 ios/
+      // `!${imageSrc}/**/{android,android/**}`, // 排除 android/
+      // `!${imageSrc}/**/{ios,ios/**}`, // 排除 ios/
       `!${imageSrc}/**/{node_modules,node_modules/**}`, // 排除 node_modules/
     ])
     .pipe(gulp.dest(temp));
@@ -69,13 +69,13 @@ const minifyImages = () => {
   return gulp
     .src([
       `${imageSrc}/**/*.{png,jpg,gif,svg}`,
-      `!${imageSrc}/**/{android,android/**}`, // 排除 android/
-      `!${imageSrc}/**/{ios,ios/**}`, // 排除 ios/
+      // `!${imageSrc}/**/{android,android/**}`, // 排除 android/
+      // `!${imageSrc}/**/{ios,ios/**}`, // 排除 ios/
       `!${imageSrc}/**/{node_modules,node_modules/**}`, // 排除 node_modules/
     ], { base: '.' })
     .pipe(plumber()) // 错误处理
     .pipe(imagemin(imageminConfig, { verbose: true }))
-    .pipe(gulp.dest(dest));
+    .pipe(gulp.dest('.'));
 };
 
 gulp.task('copy-images', copyImages);
